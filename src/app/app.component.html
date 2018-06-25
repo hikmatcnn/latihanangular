@@ -1,9 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
-</div>
-<button mat-button> Basic </button>
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+	  <mat-icon>more_vert</mat-icon>
+	</button>
+    <mat-menu #menu="matMenu">
+    	<button mat-menu-item>item 1</button>
+    	<button mat-menu-item>item 2</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
